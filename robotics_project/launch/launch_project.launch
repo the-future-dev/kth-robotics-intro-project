@@ -87,8 +87,10 @@
   </group>
 
   <!-- Arm manipulation node -->
-  <node pkg="robotics_project" name="manipulation_server" type="manipulation_server.py" outputsu="screen">
+  <node pkg="robotics_project" name="manipulation_server" type="manipulation_server.py" output="screen">
     <rosparam command="load" file="$(find robotics_project)/config/pick_and_place_params.yaml" />
+    <param name="pick_pose"          value="-1.1480, -6.1, -0.001, 0.0, 0.0, -0.709307863674, 0.70489882574"/>
+    <param name="place_pose"         value="2.6009, -1.7615, 0.0, 0.0, 0.0, 0.0, 1"/>
   </node>
 
   <!-- Map providers -->
